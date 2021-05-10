@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TimeTableController">
+   <children>
+      <ImageView fitHeight="71.0" fitWidth="1287.0" layoutX="1.0" layoutY="-3.0">
+         <image>
+            <Image url="@Path%203.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="-10.0" layoutY="83.0" mnemonicParsing="false" onAction="#coursesView" prefHeight="144.0" prefWidth="424.0" style="-fx-background-color: white; -fx-border-color: #003AFF; -fx-border-width: 0.5px;" text="Courses">
+         <effect>
+            <DropShadow offsetY="3.0">
+               <color>
+                  <Color blue="1.0" green="0.23333333432674408" opacity="0.2415917068719864" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="Segoe UI" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="72.0" fitWidth="68.0" layoutX="22.0" layoutY="123.0">
+         <image>
+            <Image url="@book.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="-10.0" layoutY="267.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="424.0" style="-fx-background-color: white; -fx-border-color: #003AFF; -fx-border-width: 0.5px;" text="TimeTable">
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0">
+               <color>
+                  <Color blue="1.0" green="0.25" opacity="0.8367474675178528" />
+               </color>
+               <input>
+                  <InnerShadow height="44.83" radius="20.725" width="40.07" />
+               </input>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="Segoe UI" size="30.0" />
+         </font>
+      </Button>
+      <Button layoutX="-10.0" layoutY="447.0" mnemonicParsing="false" onAction="#studyTimeView" prefHeight="144.0" prefWidth="424.0" style="-fx-background-color: white; -fx-border-color: #003AFF; -fx-border-width: 0.5px;" text="StudyTime">
+         <effect>
+            <DropShadow offsetY="3.0">
+               <color>
+                  <Color blue="1.0" green="0.23333333432674408" opacity="0.2415917068719864" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="Segoe UI" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="-10.0" layoutY="627.0" mnemonicParsing="false" onAction="#logoutView" prefHeight="144.0" prefWidth="424.0" style="-fx-background-color: white; -fx-border-color: #003AFF; -fx-border-width: 0.5px;" text="Logout">
+         <effect>
+            <DropShadow offsetY="3.0">
+               <color>
+                  <Color blue="1.0" green="0.23333333432674408" opacity="0.2415917068719864" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="Segoe UI" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="72.0" fitWidth="68.0" layoutX="22.0" layoutY="303.0">
+         <image>
+            <Image url="@timetable.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="83.0" fitWidth="83.0" layoutX="15.0" layoutY="477.0">
+         <image>
+            <Image url="@reading-book.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="71.0" fitWidth="68.0" layoutX="23.0" layoutY="664.0">
+         <image>
+            <Image url="@arrow.png" />
+         </image>
+      </ImageView>
+      <TabPane fx:id="tabPane" layoutX="429.0" layoutY="83.0" prefHeight="533.0" prefWidth="840.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="monTab" text="MONDAY">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="monTable" prefHeight="507.0" prefWidth="840.0" style="-fx-bORDER-color: #0050FF;">
+                          <columns>
+                            <TableColumn fx:id="snColumnMon" prefWidth="35.7333984375" text="S/N" />
+                            <TableColumn fx:id="courseColumnMon" prefWidth="248.80001831054688" text="COURSE" />
+                              <TableColumn fx:id="timeColumnMon" prefWidth="120.00006103515625" text="TIME" />
+                              <TableColumn fx:id="lectureHallColumnMon" prefWidth="226.13330078125" text="LECTURE HALL" />
+                              <TableColumn fx:id="lecturerColumnMon" prefWidth="211.20001220703125" text="LECTURER" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tueTab" text="TUESDAY">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tueTable" prefHeight="507.0" prefWidth="840.0" style="-fx-bORDER-color: #0050FF;">
+                           <columns>
+                              <TableColumn fx:id="snColumnTue" prefWidth="35.7333984375" text="S/N" />
+                              <TableColumn fx:id="courseColumnTue" prefWidth="248.80001831054688" text="COURSE" />
+                              <TableColumn fx:id="timeColumnTue" prefWidth="120.00006103515625" text="TIME" />
+                              <TableColumn fx:id="lectureHallColumnTue" prefWidth="226.13330078125" text="LECTURE HALL" />
+                              <TableColumn fx:id="lecturerColumnTue" prefWidth="211.20001220703125" text="LECTURER" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="wedTab" text="WEDNESDAY">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="wedTable" prefHeight="507.0" prefWidth="840.0" style="-fx-bORDER-color: #0050FF;">
+                           <columns>
+                              <TableColumn fx:id="snColumnWed" prefWidth="35.7333984375" text="S/N" />
+                              <TableColumn fx:id="courseColumnWed" prefWidth="248.80001831054688" text="COURSE" />
+                              <TableColumn fx:id="timeColumnWed" prefWidth="120.00006103515625" text="TIME" />
+                              <TableColumn fx:id="lectureHallColumnWed" prefWidth="226.13330078125" text="LECTURE HALL" />
+                              <TableColumn fx:id="lecturerColumnWed" prefWidth="211.20001220703125" text="LECTURER" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="thurTab" text="THURSDAY">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="thurTable" prefHeight="507.0" prefWidth="840.0" style="-fx-bORDER-color: #0050FF;">
+                           <columns>
+                              <TableColumn fx:id="snColumnThur" prefWidth="35.7333984375" text="S/N" />
+                              <TableColumn fx:id="courseColumnThur" prefWidth="248.80001831054688" text="COURSE" />
+                              <TableColumn fx:id="timeColumnThur" prefWidth="120.00006103515625" text="TIME" />
+                              <TableColumn fx:id="lectureHallColumnThur" prefWidth="226.13330078125" text="LECTURE HALL" />
+                              <TableColumn fx:id="lecturerColumnThur" prefWidth="211.20001220703125" text="LECTURER" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="friTab" text="FRIDAY">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="friTable" prefHeight="507.0" prefWidth="840.0" style="-fx-bORDER-color: #0050FF;">
+                           <columns>
+                              <TableColumn fx:id="snColumnFri" prefWidth="35.7333984375" text="S/N" />
+                              <TableColumn fx:id="courseColumnFri" prefWidth="248.80001831054688" text="COURSE" />
+                              <TableColumn fx:id="timeColumnFri" prefWidth="120.00006103515625" text="TIME" />
+                              <TableColumn fx:id="lectureHallColumnFri" prefWidth="226.13330078125" text="LECTURE HALL" />
+                              <TableColumn fx:id="lecturerColumnFri" prefWidth="211.20001220703125" text="LECTURER" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="addBtnTtP" layoutX="452.0" layoutY="629.0" mnemonicParsing="false" onAction="#addTimetableBtn" style="-fx-background-color: white;" text="Add">
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="832.0" layoutY="732.0" mnemonicParsing="false" onAction="#homeButton" style="-fx-background-color: white;" text="Home">
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="removeBtnTtP" layoutX="442.0" layoutY="680.0" mnemonicParsing="false" onAction="#removeTimetableBtn" style="-fx-background-color: white;" text="Remove">
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="23.0" layoutY="14.0">
+         <image>
+            <Image url="@timetable.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="timeField" layoutX="695.0" layoutY="621.0" prefHeight="33.0" prefWidth="175.0" promptText="E.g 10:00am - 11:30am" style="-fx-background-insets: none; -fx-border-color: #003AFF; -fx-border-width: 0 0 2 0; -fx-border-radius: 10; -fx-background-color: -fx-control-inner-background;" />
+      <ComboBox fx:id="courseComboBox" layoutX="529.0" layoutY="629.0" prefWidth="150.0" promptText="Select Course" visibleRowCount="5" />
+      <TextField fx:id="hallField" layoutX="875.0" layoutY="621.0" prefHeight="33.0" prefWidth="175.0" promptText="E.g Bethel Activity Hall" style="-fx-background-insets: none; -fx-border-color: #003AFF; -fx-border-width: 0 0 2 0; -fx-border-radius: 10; -fx-background-color: -fx-control-inner-background;" />
+      <TextField fx:id="lecturerField" layoutX="1065.0" layoutY="621.0" prefHeight="33.0" prefWidth="175.0" promptText="E.g Mr. John Doe" style="-fx-background-insets: none; -fx-border-color: #003AFF; -fx-border-width: 0 0 2 0; -fx-border-radius: 10; -fx-background-color: -fx-control-inner-background;" />
+   </children>
+</AnchorPane>

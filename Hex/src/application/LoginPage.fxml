@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="350.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginPageController">
+   <children>
+      <Text layoutX="-3.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" x="124.0" y="94.0">
+         <font>
+            <Font name="Segoe UI" size="44.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="20.26" offsetX="4.0" offsetY="6.0" radius="8.735" width="16.68">
+               <color>
+                  <Color opacity="0.42560550570487976" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Text>
+      <Button fx:id="submit" layoutX="152.0" layoutY="386.0" mnemonicParsing="false" onAction="#submitButtonClicked" style="-fx-background-color: white;" text="Submit">
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="matric_field" layoutX="101.0" layoutY="238.0" style="-fx-border-color: #003AFF;">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="4.77" offsetX="3.0" offsetY="3.0" radius="1.8849999999999998" width="4.77">
+               <color>
+                  <Color opacity="0.33564022183418274" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <PasswordField fx:id="pw_field" layoutX="101.0" layoutY="311.0" onAction="#submitButtonClicked" style="-fx-border-color: #003AFF;">
+         <effect>
+            <DropShadow height="4.77" offsetX="3.0" offsetY="3.0" radius="1.8849999999999998" width="4.77">
+               <color>
+                  <Color opacity="0.3400000035762787" />
+               </color>
+            </DropShadow>
+         </effect>
+      </PasswordField>
+      <ImageView fitHeight="39.0" fitWidth="43.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@hextacy_logo.png" />
+         </image>
+      </ImageView>
+      <Text fill="#1181f0" layoutX="57.0" layoutY="38.0" stroke="#1181f0" strokeType="OUTSIDE" strokeWidth="0.0" text="HEXTACY">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Text>
+      <Label layoutX="101.0" layoutY="284.0" prefHeight="18.0" prefWidth="100.0" text="Password">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="213.0" prefHeight="18.0" prefWidth="100.0" text="Matric. No">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="authLabel" layoutX="100.0" layoutY="353.0" prefHeight="21.0" prefWidth="224.0" text="             " textFill="#e80c0c">
+         <font>
+            <Font name="System Bold" size="9.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
